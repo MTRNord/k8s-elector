@@ -24,7 +24,7 @@ build:  ## Build the executable binary
 
 .PHONY: build-linux
 build-linux:  # Buld the executable binary for linux amd64
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -ldflags "${LDFLAGS}" -o ${BIN_NAME} cmd/elector.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -a -installsuffix cgo -ldflags "${LDFLAGS}" -o ${BIN_NAME} cmd/elector.go
 
 .PHONY: clean
 clean:  ## Remove temporary files and build artifacts
